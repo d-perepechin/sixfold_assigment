@@ -1,0 +1,1 @@
+gcloud functions deploy truck_data_to_bq --runtime python37 --trigger-resource gs://sixfold_truck_data --trigger-event google.storage.object.finalize --region europe-west2

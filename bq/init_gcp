@@ -1,0 +1,16 @@
+export LOCATION=europe-west2
+export BUCKET_NAME=sixfold
+export PROJECT_ID=dataengeneeringbook
+export TOPIC_ID=sixfold_truck_location
+export TOPIC_TRUCK_DATA=sixfold_truck_data
+export BUCKET_TRUCK_DATA=sixfold_truck_data
+
+
+gsutil mb -l $LOCATION gs://$BUCKET_NAME
+gsutil mb -l $LOCATION gs://sixfold_temp
+gsutil mb -l $LOCATION gs://$TOPIC_TRUCK_DATA
+
+bq mk --location $LOCATION --dataset $BUCKET_NAME
+
+gcloud pubsub topics create $TOPIC_ID
+gcloud pubsub topics create $sixfold_truck_data

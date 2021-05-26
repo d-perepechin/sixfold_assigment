@@ -1,0 +1,1 @@
+python pubsub_to_gcp.py --project=$PROJECT_ID   --region=$REGION   --input_topic=projects/$PROJECT_ID/topics/$TOPIC_TRUCK_DATA  --output_path=gs://$BUCKET_TRUCK_DATA/trucks   --runner=DataflowRunner   --window_size=5   --num_shards=1   --temp_location=gsutil mb gs://sixfold_temp/temp   --service_account_email=composer-dev@dataengeneeringbook.iam.gserviceaccount.com

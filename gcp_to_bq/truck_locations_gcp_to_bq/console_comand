@@ -1,0 +1,1 @@
+gcloud functions deploy load_to_bq --runtime python37 --trigger-resource gs://sixfold --trigger-event google.storage.object.finalize --region europe-west2
